@@ -1,0 +1,35 @@
+{% extends 'layouts/base.html' %} {% block titulo %} GUI para MariaDB {% endblock %} {% block contenido %}
+<h1>GUI para MariaDB</h1>
+<h1>Ingrese los datos para la gestion de MariaDB</h1>
+
+<form action="{{ url_for('crear_producto') }}" method="POST">
+    <div class="mb-3">
+        <label for="host">Host</label>
+        <input type="text" required class="form-control" id="host" name="host">
+    </div>
+
+    <div class="mb-3">
+        <label for="puerto">Puerto</label>
+        <input type="number" required class="form-control" id="puerto" name="puerto">
+    </div>
+
+    <div class="mb-3">
+        <label for="usuario">Usuario</label>
+        <input type="text" required class="form-control" id="usuario" name="usuario">
+    </div>
+
+    <div class="mb-3">
+        <label for="contrasena">Contraseña</label>
+        <input type="text" required class="form-control" id="contrasena" name="contrasena">
+    </div>
+
+    <div class="mb-3">
+        <label for="basedatos">Base de Datos</label>
+        <input type="text" required class="form-control" id="basedatos" name="basedatos">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Conectarme!</button>
+</form>
+
+{% endblock%}
+
