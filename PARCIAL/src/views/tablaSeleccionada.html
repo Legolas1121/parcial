@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+
+{% block titulo %}
+    TablaSeleccionada
+{% endblock %}
+
+
+{% block contenido %} 
+<div class="container pt-5">
+    <h1>{{tabla}}</h1>
+<div class="row">
+    <div class="col col-lg-6 offset-lg-3">
+        <div class="card text-center">
+            <div class="table">
+                <h1 class="card-body bg-dark text-white">{{ tablaSeleccionada }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
